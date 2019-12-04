@@ -3,12 +3,9 @@
         private $nonce;
 
         public function runtime() {
-            $this->nonce = module_enabled("cacher") ?
-                token(array(USE_ZLIB,
-                            HTTP_ACCEPT_DEFLATE,
-                            HTTP_ACCEPT_GZIP,
-                            session_id(),
-                            rawurldecode(unfix(self_url())))) : random(32) ;
+            $this->nonce = !module_enabled("cacher") ?
+                random(32) :
+                Modules::$instances["cacher"]->cache_id() ;
 
             $this->nonce = base64_encode($this->nonce);
 
