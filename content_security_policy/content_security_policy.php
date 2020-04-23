@@ -3,11 +3,7 @@
         private $nonce;
 
         public function runtime() {
-            $this->nonce = !module_enabled("cacher") ?
-                random(32) :
-                Modules::$instances["cacher"]->cache_id() ;
-
-            $this->nonce = base64_encode($this->nonce);
+            $this->nonce = base64_encode(random(32));
 
             header("Content-Security-Policy:".
                    " default-src 'self';".
