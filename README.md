@@ -1,4 +1,4 @@
 chyrp-csp
 =========
 
-Adds a Content-Security-Policy header to the blog.
+Adds a strict Content-Security-Policy header to the blog.
