@@ -2,7 +2,7 @@
     class ContentSecurityPolicy extends Modules {
         private $nonce;
 
-        public function runtime() {
+        public function runtime(): void {
             $this->nonce = base64_encode(random(32));
 
             header("Content-Security-Policy:".
@@ -12,11 +12,11 @@
                    " frame-ancestors 'self'");
         }
 
-        public function javascripts_nonce($nonce) {
+        public function javascripts_nonce($nonce): string {
             return $this->nonce;
         }
 
-        public function stylesheets_nonce($nonce) {
+        public function stylesheets_nonce($nonce): string {
             return $this->nonce;
         }
     }
