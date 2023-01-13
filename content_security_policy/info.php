@@ -6,5 +6,6 @@ return array(
     "description"   => __("Adds a strict Content-Security-Policy header to the blog.", "content_security_policy"),
     "author"        => array(
         "name"      => "Daniel Pimley",
-        "url"       => "http://pimley.net/")
+        "url"       => "http://pimley.net/"
+    )
 );
