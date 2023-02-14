@@ -9,7 +9,8 @@
                    " default-src 'self';".
                    " style-src 'self' 'nonce-".$this->nonce."';".
                    " script-src 'self' 'nonce-".$this->nonce."';".
-                   " frame-ancestors 'self'");
+                   " frame-ancestors 'self';".
+                   " form-action 'self';");
         }
 
         public function javascripts_nonce($nonce): string {
