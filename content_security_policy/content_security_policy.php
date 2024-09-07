@@ -15,11 +15,15 @@
             );
         }
 
-        public function javascripts_nonce($nonce): string {
+        public function javascripts_nonce(
+            $nonce
+        ): string {
             return $this->nonce;
         }
 
-        public function stylesheets_nonce($nonce): string {
+        public function stylesheets_nonce(
+            $nonce
+        ): string {
             return $this->nonce;
         }
     }
