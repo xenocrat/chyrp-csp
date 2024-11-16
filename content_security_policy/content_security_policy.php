@@ -2,7 +2,8 @@
     class ContentSecurityPolicy extends Modules {
         private $nonce;
 
-        public function runtime(): void {
+        public function runtime(
+        ): void {
             $this->nonce = base64_encode(random(32));
 
             header(
