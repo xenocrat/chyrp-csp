@@ -5,6 +5,6 @@ msgid "Content Security Policy"
 msgstr ""
 
 #: modules/content_security_policy/info.php:6
-msgid "Adds a strict Content-Security-Policy header to the blog."
+msgid "Adds a strict <code>Content-Security-Policy</code> header to the blog."
 msgstr ""
 
